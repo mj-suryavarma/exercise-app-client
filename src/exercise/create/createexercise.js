@@ -57,7 +57,7 @@ class CreateExercise extends React.Component {
                   'time':fullTimeValue,
           })
         }
-           fetch('/api/v1/exercise',reqOptions)
+           fetch('https://mj-exercise.herokuapp.com/api/v1/exercise',reqOptions)
                .then(res => res.json())
                .then(res => this.setState({success:res.success}))
                .catch(err => console.log(err))

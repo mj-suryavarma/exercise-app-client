@@ -50,7 +50,7 @@ class Register extends React.Component {
 
       body : JSON.stringify({name,email,password})}
 
-    await fetch('/api/v1/auth/register',reqOptions)
+    await fetch('https://mj-exercise.herokuapp.com/api/v1/auth/register',reqOptions)
      .then(async res => await res.json())
      .then(data =>{
         this.setState({isLoading:false})

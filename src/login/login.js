@@ -46,7 +46,7 @@ class Login extends React.Component {
 
             body : JSON.stringify({email,password})    }
 
- try {  await fetch('/api/v1/auth/login',reqOptions)   //// receive the response using fetch
+ try {  await fetch('https://mj-exercise.herokuapp.com/api/v1/auth/login',reqOptions)   //// receive the response using fetch
      .then(async res => await res.json())
      .then( data =>  {
        this.setState({backend:data})

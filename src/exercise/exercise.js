@@ -24,7 +24,7 @@ function Exercise() {
                  'Authorization':`Bearer ${localStorage.getItem('token')}`}
      }
 
-       await axios.delete(`/api/v1/exercise/${id}`,reqOptions)
+       await axios.delete(`https://mj-exercise.herokuapp.com/api/v1/exercise/${id}`,reqOptions)
             .then(res =>{
               console.log(res.success)
               
@@ -53,7 +53,7 @@ function Exercise() {
                     }
              
              
-                    axios.get('/api/v1/exercise',{headers})
+                    axios.get('https://mj-exercise.herokuapp.com/api/v1/exercise',{headers})
                       .then(res => { 
                           setAllData(res.data.getAllExercise)
                     })

@@ -46,7 +46,7 @@ class UpdateExercise extends React.Component {
    
 }
 
-  axios.get(`/api/v1/exercise/update/${id}`,reqOptions)
+  axios.get(`https://mj-exercise.herokuapp.com/api/v1/exercise/update/${id}`,reqOptions)
   .then(res => {
     const {name, description,duration,time,completed} = res.data.exercise
     this.setState({
@@ -105,7 +105,7 @@ class UpdateExercise extends React.Component {
   
         }
         console.log("completed value ",iscompleted)
-          await axios.patch(`/api/v1/exercise/update/${id}`,body,reqOptions)
+          await axios.patch(`https://mj-exercise.herokuapp.com/api/v1/exercise/update/${id}`,body,reqOptions)
                .then(res =>{
                  const {success} = res.data
                 this.setState({success:success})
